@@ -50,13 +50,17 @@ class ConfirmationCodeInput extends PureComponent<Props, State> {
       y: number,
       xEnd: number,
       yEnd: number,
-    |},
-  } = {};
-
-  clear() {
-    this.handlerOnTextChange('');
-  }
-
+      |},
+    } = {};
+    
+    clear() {
+      this.handlerOnTextChange('');
+    }
+    
+    setValue(value: string) {
+      this.handlerOnTextChange(value);
+    }
+    
   handlerOnLayoutCell = (index: number, event: LayoutEvent) => {
     const { width, x, y, height } = event.nativeEvent.layout;
 
