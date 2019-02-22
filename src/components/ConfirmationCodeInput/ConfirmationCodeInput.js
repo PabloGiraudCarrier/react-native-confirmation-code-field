@@ -64,7 +64,7 @@ class ConfirmationCodeInput extends PureComponent<Props, State> {
   };
 
   renderCode = (codeSymbol: string, index: number) => {
-    const { cellProps, maskSymbol } = this.props;
+    const { cellProps, maskSymbol, noCursor } = this.props;
     const isActive = this.getCurrentIndex() === index;
 
     let customProps = null;
@@ -95,7 +95,7 @@ class ConfirmationCodeInput extends PureComponent<Props, State> {
           customStyle,
         )}
       >
-        {isActive
+        {isActive && !noCursor
           ? this.renderCursor()
           : (codeSymbol && maskSymbol) || codeSymbol}
       </Cell>
