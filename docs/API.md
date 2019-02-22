@@ -29,6 +29,7 @@
     - [`focus() => void`](#focus--void)
     - [`blur() => void`](#blur--void)
     - [`clear = () => void`](#clear----void)
+    - [`setValue = (string) => void`](#setvalue--string--void)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
