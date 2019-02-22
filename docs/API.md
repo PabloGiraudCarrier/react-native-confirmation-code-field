@@ -18,6 +18,7 @@
     - [`size?: number`](#size-number)
     - [`inputPosition?: 'left' | 'right' | 'center' | 'full-width'`](#inputposition-left--right--center--full-width)
     - [`variant?: 'border-box' | 'border-circle' | 'border-b' | 'clear'`](#variant-border-box--border-circle--border-b--clear)
+    - [`noCursor?: boolean`](#nocursor-boolean)
   - [Customize props](#customize-props)
     - [`containerProps?: ViewProps`](#containerprops-viewprops)
     - [`inputProps?: TextInputProps`](#inputprops-textinputprops)
@@ -111,6 +112,10 @@ Some built-in variants. Default `border-box`. [Demo `variant`:](examples/rn56/sr
 
 <img width="400" src="https://raw.githubusercontent.com/retyui/react-native-confirmation-code-field/master/docs/img/variant.jpg"/>
 
+### `noCursor?: boolean`
+
+Remove the cursor from the input. Default `false`.
+
 ## Customize props
 
 ### `containerProps?: ViewProps`
@@ -154,6 +159,10 @@ Method that will blur the TextInput programmatically.
 ### `clear = () => void`
 
 Method to clear the entered code.
+
+### `setValue = (string) => void`
+
+Manually set the value.
 
 ```js
 import React, { Component, createRef } from 'react';
